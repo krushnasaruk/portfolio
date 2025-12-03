@@ -1,0 +1,49 @@
+.tech-marquee-section {
+    padding: 2rem 0;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.tech-item {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin: 0 3rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-item:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}

@@ -1,0 +1,62 @@
+.interests-section {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.interests-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.interest-item:hover {
+    background: white;
+    box-shadow: var(--shadow-md);
+    border-color: rgba(79, 70, 229, 0.1);
+    transform: scale(1.02);
+}
+
+.interest-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.interest-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.interest-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .interest-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+}
